@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>RiceCheck</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="http://webthemez.com" />
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+<?
+include("connection.php");
+include("config.php");
+?>
+	<script>
+		function showMessage() {
+			alert("Message sent successfully!");
+		}
+	</script>
+</head>
+
+<style>
+
+	.nav-ul{
+		display:flex;
+	}
+
+</style>
+
+<body>
+	<div id="wrapper">
+		<!-- start header -->
+		<header>
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<img src="img/ricechecklg (1).png" height="80px" width="80px" alt=”site’s logo”>
+						<!--<a class="navbar-brand" href="index.html"><i class="icon-info-blocks material-icons"></i>Jubilee
+							Hotel</a>-->
+					</div>
+					<div class="navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li class="active"><a class="waves-effect waves-dark" href="index.html">Home</a></li>
+							<li><a class="waves-effect waves-dark" href="about.html">About</a></li>
+							<!--<li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">About Us <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="waves-effect waves-dark" href="about.html">Hotel</a></li>
+                            <li><a class="waves-effect waves-dark" href="#">Our Team</a></li>
+                            <li><a class="waves-effect waves-dark" href="#">Announcements</a></li> 
+                            <li><a class="waves-effect waves-dark" href="#">Partners</a></li>
+                            
+                        </ul>
+                    </li> -->
+							
+						
+							<li><a class="waves-effect waves-dark" href="blogs.php">Blogs</a></li>
+							<li><a class="waves-effect waves-dark" href="services.html">Services</a></li>
+							<li><a class="waves-effect waves-dark" href="portfolio.html">Gallery</a></li>
+							<li><a class="waves-effect waves-dark" href="admin\login.php">Admin</a></li>
+						</ul>
+					</div>
+					<!-- <div class="weather-forecast">
+						<div class="forecast-description flex-items">
+							<p class="city-name">Mwea</p>
+							<p class="date">15 January 2024</p>
+						</div>
+
+						<div class="weather-stats flex-items">
+							<p class="temperature">
+								3&deg;C
+							</p>
+							<p class="sky">Clear sky</p>
+						</div>
+						<p class="humidity">Humidity:43.6%</p>
+
+					</div> -->
+				</div>
+
+			</div>
+		</header>
+		<section id="inner-headline">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="pageTitle">Contact Us</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="content">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-logo">
+							<h3>Get<span class="color"> in Touch</span></h3>
+							<p>"At Rice Check, we're committed to making your experience as smooth and convenient as possible. Don't hesitate to reach out to us anytime you need assistance. Our aim is to ensure your satisfaction and comfort throughout your use of our application."
+							</p>
+							<p>"At Rice, we're dedicated to ensuring your experience is seamless and hassle-free. Feel free to reach out to us at any time; we're here to make your journey with us as enjoyable and convenient as possible. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<p> </p>
+
+						<!-- Form itself
+						<form action="contacts.php" method="post"> 
+						<form name="sentMessage" id="contactForm" novalidate> -->
+							<form action="contacts.php" method="post" name="sentMessage" id="contactForm" novalidate>
+    <div class="input-field">
+        <input type="text" name="name" class="form-control" id="name" required
+            data-validation-required-message="Please enter your name" />
+        <label for="name" class="">Name</label>
+        <p class="help-block"></p>
+    </div>
+
+    <div class="input-field">
+        <input type="email" name="email" class="form-control" id="email" required
+            data-validation-required-message="Please enter your email" />
+        <label for="email" class="">Phone/Email</label>
+    </div>
+
+    <div class="input-field">
+        <textarea rows="9" cols="100" required class="form-control materialize-textarea"
+            data-validation-required-message="Please enter your message" minlength="5"
+            data-validation-minlength-message="Min 5 characters" maxlength="999"
+            style="resize:none" name="message"></textarea>
+        <label for="message" class="" id="message">Message</label>
+    </div>
+
+    <div id="success"></div> <!-- For success/fail messages -->
+
+    <button type="submit" value="Submit" onclick="showMessage()"
+        class="btn btn-primary waves-effect waves-dark pull-right">Send</button><br />
+</form>
+					</div>
+					<div class="col-md-6">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d180546.8083058154!2d37.39204622852129!3d-0.6538642701549754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smwea%20plantation!5e0!3m2!1sen!2ske!4v1713302523867!5m2!1sen!2ske"
+							width="100%" height="450%" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<!-- <img src="img/Screenshot (1609).png"> -->
+						<!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:500px;width:600px;"><div id="gmap_canvas" style="height:500px;width:600px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.trivoo.net" id="get-map-data">trivoo</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>-->
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+
+		<section class="questions-answers container">
+			<p class="frequently-asked-questions">Frequently Asked Questions</p>
+			<p class="accordion-description">
+				Welcome to our Rice Q&A Hub! Here, we delve into the diverse world of rice, covering its nutritional benefits, cooking techniques, and global culinary influences. Whether you're curious about different rice varieties, seeking cooking tips for perfecting your rice dishes, or looking for creative recipes, we've got you covered. Explore the richness of rice culture and elevate your culinary experience with our informative Q&A format.
+			</p>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingOne">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						Can rice be reheated safely?
+					</button>
+				  </h2>
+				  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						Yes, rice can be reheated safely if stored and reheated properly. It's important to refrigerate cooked rice promptly and reheat it thoroughly to kill any bacteria that may have grown during storage.
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingTwo">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						How can I add flavor to plain rice?
+					</button>
+				  </h2>
+				  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						You can add flavor to plain rice by cooking it in broth instead of water, adding herbs and spices, mixing in vegetables or meats, or drizzling with sauces or flavored oils after cooking
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						How is rice grown?
+					</button>
+				  </h2>
+				  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						Rice is typically grown in flooded fields called rice paddies. The process involves planting rice seeds in prepared soil, flooding the fields with water, maintaining the water level throughout the growing season, and then harvesting the mature rice plants.
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						How can I cook rice perfectly every time?
+					</button>
+				  </h2>
+				  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						To cook rice perfectly, use the appropriate ratio of water to rice (usually 1:2 for white rice and 1:2.5 for brown rice), bring the water to a boil, add the rice, cover, and simmer on low heat until all the water is absorbed. Let it rest for a few minutes before fluffing with a fork.
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+						How should rice be stored to maintain its freshness?
+					</button>
+				  </h2>
+				  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						Rice should be stored in an airtight container in a cool, dry place, away from sunlight. This helps prevent moisture and pests from spoiling the rice.
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+						What are some popular rice dishes from around the world?
+					</button>
+				  </h2>
+				  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						Rice is a good source of carbohydrates and provides energy to the body. It also contains small amounts of protein and some essential vitamins and minerals like B vitamins and iron. Brown rice, in particular, is higher in fiber and nutrients compared to white rice.
+					</div>
+				  </div>
+				</div>
+				<div class="accordion-item">
+				  <h2 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSix">
+						What is the nutritional value of rice?
+					</button>
+				  </h2>
+				  <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						Rice is a good source of carbohydrates and provides energy to the body. It also contains small amounts of protein and some essential vitamins and minerals like B vitamins and iron. Brown rice, in particular, is higher in fiber and nutrients compared to white rice.
+					</div>
+				  </div>
+				</div>
+			  </div>
+
+
+
+
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Our Contact</h5>
+							<address>
+								<strong>Jubilee Hotels</strong>
+								<br>
+								Kitui<br>
+								P O Box -21542 Kenya.
+							</address>
+							<p>
+								<i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
+								<i class="icon-envelope-alt"></i> email@jubileehotel.com
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Quick Links</h5>
+							<ul class="link-list">
+								<li><a class="waves-effect waves-dark" href="index.html">Home</a></li>
+								<li><a class="waves-effect waves-dark" href="about.html">About us</a></li>
+								<li><a class="waves-effect waves-dark" href="services.html">Services</a></li>
+								<li><a class="waves-effect waves-dark" href="portfolio.html">Gallery</a></li>
+								<li><a class="waves-effect waves-dark" href="pricing.html">Pricing</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Latest posts</h5>
+							<ul class="link-list">
+								<li><a class="waves-effect waves-dark" href="pricing.html">Get 10% off discounts for low
+										season offers!</a></li>
+								<li><a class="waves-effect waves-dark" href="contact.html">Book early for Chrismas
+										Holidays and get discounts!</a></li>
+								<li><a class="waves-effect waves-dark" href="contact.html">Win vouchers for our weekly
+										draw!</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Announcements</h5>
+							<ul class="link-list">
+								<li><a class="waves-effect waves-dark" href="contact.html">Hotel bookings are
+										ongoing now.</a></li>
+								<li><a class="waves-effect waves-dark" href="#">Jubilee Hotel launches new website</a>
+								</li>
+								<li><a class="waves-effect waves-dark" href="services.html">We are rebranding soon. Be
+										prepared</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sub-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="copyright">
+								<p>
+									<span>&copy; Jubilee Hotels 2023. All rights reserved. <a
+											href="https://webthemez.com/free-bootstrap-templates/" target="_blank"></a>
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<ul class="social-network">
+								<li><a class="waves-effect waves-dark" href="https://facebook.com/" target="_blank"
+										data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="waves-effect waves-dark" href="https://twitter.com/" target="_blank"
+										data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="waves-effect waves-dark" href="https://linkedin.com/" target="_blank"
+										data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+								<li><a class="waves-effect waves-dark" href="https://pinterest.com/" target="_blank"
+										data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+								<!--<li><a class="waves-effect waves-dark" href="https://google.com/" target="_blank" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<a href="#" class="scrollup waves-effect waves-dark"><i class="fa fa-angle-up active"></i></a>
+	<!-- javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-media.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/animate.js"></script>
+	<!-- Vendor Scripts -->
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script src="contact/jqBootstrapValidation.js"></script>
+	<script src="contact/contact_me.js"></script>
+</body>
+
+</html>

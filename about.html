@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Rice Check</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="http://webthemez.com" />
+	<!-- css -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<style>
+		.image {
+			opacity: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+
+		.middle {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			/*text-align: center;*/
+		}
+
+		.container:hover .image {
+			opacity: 0.3;
+		}
+
+		.container:hover .middle {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<!-- start header -->
+		<header>
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<img src="img/ricechecklg (1).png" height="80px" width="80px" alt=”site’s logo”>
+						<!--<a class="navbar-brand" href="index.html"><i class="icon-info-blocks material-icons"></i>Jubilee
+							Hotel</a>-->
+					</div>
+					<div class="navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li class="active"><a class="waves-effect waves-dark" href="index.html">Home</a></li>
+						
+						
+							<li><a class="waves-effect waves-dark" href="blogs.php">Blogs</a></li>
+							<li><a class="waves-effect waves-dark" href="services.html">Services</a></li>
+							<li><a class="waves-effect waves-dark" href="portfolio.html">Gallery</a></li>
+							<!-- <li><a class="waves-effect waves-dark" href="pricing.html">Pricing</a></li> -->
+							<li><a class="waves-effect waves-dark" href="contact.html">Contact</a></li>
+							<li><a class="waves-effect waves-dark" href="admin\login.php">Admin</a></li>
+						</ul>
+					</div>
+					<!-- <div class="weather-forecast">
+						<div class="forecast-description flex-items">
+							<p class="city-name">Mwea</p>
+							<p class="date">15 January 2024</p>
+						</div>
+
+						<div class="weather-stats flex-items">
+							<p class="temperature">
+								3&deg;C
+							</p>
+							<p class="sky">Clear sky</p>
+						</div>
+						<p class="humidity">Humidity:43.6%</p>
+
+					</div> -->
+				</div>
+
+			</div>
+		</header><!-- end header -->
+		<section id="inner-headline">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="pageTitle">About Us</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="content">
+			<section class="section-padding">
+				<div class="container">
+					<div class="row showcase-section">
+						<div class="col-md-6">
+
+							<img src="img/Hotel-Bldng-img.png" alt="Avatar" class="image" style="width:100%">
+							<div class="middle">
+								<img src="img/booking6image.jpg" alt="booking">
+							</div>
+
+
+							<!--<img src="img/Hotel-Bldng-img.png" alt="showcase image">-->
+						</div>
+						<div class="col-md-6">
+							<div class="about-text">
+								<h3 id="Hotel">Our <span class="color">Application</span></h3>
+								<p>Our platform fosters community collaboration, allowing farmers to connect, share experiences, and learn from one another..</p>
+								<p>With Rice Check, farming isn't just a livelihood; it's a journey of growth, supported by cutting-edge technology and a thriving community dedicated to agricultural excellence.</p>
+								<p>State-of-the-art amenities and cutting-edge technology further enhance your stay,
+									providing security, convenience and entertainment at your fingertips.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="container">
+
+				<div class="about">
+
+
+					<div class="row">
+						<div class="col-md-4">
+							<!-- Heading and para -->
+							<div class="block-heading-two">
+								<h3><span>Why Choose Us?</span></h3>
+							</div>
+							<p>Should you require assistance or guidance during your stay, our friendly staff is always
+								there for you.</p>
+							<p> From arranging transportation and local excursions to providing personalized
+								recommendations, we are committed to meeting your needs with utmost care and
+								professionalism. </p>
+							<p>Our hotel is a sanctuary of luxury, offering an exceptional experience for the discerning
+								traveler. </p>
+						</div>
+						<div class="col-md-4">
+							<div class="block-heading-two">
+								<h3><span>Our Offers</span></h3>
+							</div>
+							<!-- Accordion starts -->
+							<div class="panel-group" id="accordion-alt3">
+								<!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+								<div class="panel">
+									<!-- Panel heading -->
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseOne-alt3">
+												<i class="fa fa-angle-right"></i> Hospitality
+											</a>
+										</h4>
+									</div>
+									<div id="collapseOne-alt3" class="panel-collapse collapse">
+										<!-- Panel body -->
+										<div class="panel-body">
+											We're committed to ensuring that every aspect of your experience with the Rice Check application is tailored to your preferences and needs.
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseTwo-alt3">
+												<i class="fa fa-angle-right"></i> Continental Cuisine
+											</a>
+										</h4>
+									</div>
+									<div id="collapseTwo-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											For culinary delights, our hotel features a collection of exceptional dining
+											options. Our culinary offerings cater to diverse tastes and preferences.
+											From an upscale restaurant serving gourmet cuisine to a cozy café offering
+											artisanal coffee and yummy pastries.
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseThree-alt3">
+												<i class="fa fa-angle-right"></i> Personalised care
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Should you require assistance or guidance during your stay, our staff is at
+											your disposal. We provide personalized care and bookings and committed to
+											ensuring your needs are met with utmost urgency and professionalism.
+										</div>
+									</div>
+								</div>
+								<div class="panel">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-alt3"
+												href="#collapseFour-alt3">
+												<i class="fa fa-angle-right"></i> Boooking amenities
+											</a>
+										</h4>
+									</div>
+									<div id="collapseFour-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Beyond the confines of your room, our hotel offers a wealth of recreational
+											amenities. Book excursion trips, work up a sweat in the well-equipped
+											fitness center, or simply unwind in our tranquil gardens. Whatever your
+											preference, our facilities are designed to enhance your overall experience.
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Accordion ends -->
+
+						</div>
+
+						<div class="col-md-4">
+							<div class="block-heading-two">
+								<h3><span>Our Ratings</span></h3>
+							</div>
+							<h6>Customer care</h6>
+							<div class="progress pb-sm">
+								<!-- White color (progress-bar-white) -->
+								<div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="85"
+									aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+									<span class="sr-only">85% Complete (excellence)</span>
+								</div>
+							</div>
+							<h6>Hospitality</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+									<span class="sr-only">80% Complete (excellence)</span>
+								</div>
+							</div>
+							<h6>Guests Experience</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="82"
+									aria-valuemin="0" aria-valuemax="100" style="width: 82%">
+									<span class="sr-only">82% Complete (excellence)</span>
+								</div>
+							</div>
+							<h6>Accommodation</h6>
+							<div class="progress pb-sm">
+								<div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="85"
+									aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+									<span class="sr-only">85% Complete (excellence)</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="about home-about">
+						<div class="container">
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="block-heading-two">
+										<h3><span>Hotel Features</span></h3>
+									</div>
+									<div class="tab-section">
+										<div class="s12">
+											<ul class="tabs">
+												<li class="tab col s4"><a href="#test1"
+														class="waves-effect waves-dark">Guests</a></li>
+												<li class="tab col s4"><a class="waves-effect waves-dark active"
+														href="#test2">Amenities</a></li>
+												<li class="tab col s4"><a href="#test3"
+														class="waves-effect waves-dark">Rooms</a></li>
+											</ul>
+										</div>
+										<div id="test1" class="col s12 container"> For our guests, we provide fully
+											equipped accommodation that caters to all your personal needs. Featuring
+											modern amenities such as high-speed internet access, printing and copying
+											services, and private meeting rooms, our guest house ensures a romantic or
+											productive and secure environment. </div>
+										<div id="test2" class="col s12 container">Our hotel boasts a breathtaking
+											rooftop terrace where guests can unwind and enjoy panoramic views of the
+											surrounding cityscape or natural beauty of Kitui. With comfortable seating,
+											lush greenery, and a serene ambiance, the terrace provides a tranquil escape
+											from the hustle and bustle of everyday life. </div>
+										<div id="test3" class="col s12 container">For our rooms, our state of the art
+											smart security locks ensure that you feel safe at your booked premises. We
+											have managed to combine state of art technology to ensure guests experience
+											utmost comfort at our guest house. </div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="block-heading-two">
+										<h3 id="Latest News"><span>Latest News</span></h3>
+									</div>
+									<!-- Accordion starts -->
+									<ul class="collapsible" id="accordionSection" data-collapsible="accordion">
+										<li>
+											<div class="collapsible-header active"><i
+													class="material-icons">filter_drama</i>Rebranding</div>
+											<div class="collapsible-body">
+												<p>In order to suit your needs, Jubilee Hotel is rebranding with bigger
+													and better offers and room discounted prices for our clients during
+													high and low seasons. </p>
+											</div>
+										</li>
+										<li>
+											<div class="collapsible-header"><i class="material-icons">place</i>Offers
+											</div>
+											<div class="collapsible-body">
+												<p>During low season, we will be offering a 10% discount for clients at
+													a first come first serve basis.</p>
+											</div>
+										</li>
+										<li>
+											<div class="collapsible-header"><i
+													class="material-icons">whatshot</i>Website</div>
+											<div class="collapsible-body">
+												<p>Jubilee guest house is set to relaunch its new interractive website
+													accessible from all parts of the globe. </p>
+											</div>
+										</li>
+									</ul>
+									<!-- Accordion ends -->
+
+								</div>
+
+								<div class="col-md-4">
+									<div class="block-heading-two">
+										<h3><span>Testimonials</span></h3>
+									</div>
+									<div class="testimonials">
+										<div class="active item">
+											<blockquote>
+												<p>"Thank you so much Jubilee Guest House for your welcoming services.
+													Your staff are very friendly and understanding. The accommodation is
+													affordable. I look foward to visiting more often when I travel to
+													Kitui again."</p>
+											</blockquote>
+											<div class="carousel-info">
+												<img alt="" src="img/avatar.png" class="pull-left">
+												<div class="pull-left">
+													<span class="testimonials-name">Anonymous</span>
+													<span class="testimonials-post">Satisfied guest</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<br>
+						</div>
+					</div>
+
+
+					<br>
+					<!-- Our Team starts -->
+
+					<!-- Heading -->
+					<div class="block-heading-six">
+						<h4 class="bg-color" id="Our Team">Our Team</h4>
+					</div>
+					<br>
+
+					<!-- Our team starts -->
+
+					<div class="team-six">
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/Screenshot (1275).png"
+										alt="Hotel Owner avatar">
+									<!-- Name -->
+									<h4>Johne Doe</h4>
+									<span class="deg">Hotel Owner</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/Screenshot (1275).png"
+										alt="Hotel Manager avatar">
+									<!-- Name -->
+									<h4>Jennifer</h4>
+									<span class="deg">Hotel Manager</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/Screenshot (1275).png"
+										alt="Operations Manager">
+									<!-- Name -->
+									<h4>Christean</h4>
+									<span class="deg">Operations Manager</span>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<!-- Team Member -->
+								<div class="team-member">
+									<!-- Image -->
+									<img class="img-responsive" src="img/Screenshot (1275).png"
+										alt="Communications Officer">
+									<!-- Name -->
+									<h4>Kerinele rase</h4>
+									<span class="deg">Communications Officer</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Our team ends -->
+
+
+				</div>
+
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Our Contact</h5>
+							<address>
+								<strong>Jubilee Hotel</strong><br>
+								Kitui Rd, Near Kitui House<br>
+								1-21542 Kitui Nairobi.
+							</address>
+							<p>
+								<i class="icon-phone"></i> (+254) 0720-789 - 125 <br>
+								<i class="icon-envelope-alt"></i> jubileehotel@gmail.com
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Quick Links</h5>
+							<ul class="link-list">
+								<li><a class="waves-effect waves-dark" href="index.html">Home</a></li>
+								<li><a class="waves-effect waves-dark" href="services.html">Services</a></li>
+								<li><a class="waves-effect waves-dark" href="portfolio.html">Gallery</a></li>
+								<li><a class="waves-effect waves-dark" href="pricing.html">Pricing</a></li>
+								<li><a class="waves-effect waves-dark" href="contact.html">Contact us</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Latest posts</h5>
+							<ul class="link-list">
+								<li><a class="waves-effect waves-dark" href="pricing.html">Get 10% off discounts for low
+										season offers!</a></li>
+								<li><a class="waves-effect waves-dark" href="contact.html">Book early for Chrismas
+										Holidays and get discounts!</a></li>
+								<li><a class="waves-effect waves-dark" href="contact.html">Win vouchers for our weekly
+										draw!</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Announcements</h5>
+							<ul class="link-list">
+								<li><a class="waves-effect waves-dark" href="contact.html">Hotel bookings are
+										ongoing now.</a></li>
+								<li><a class="waves-effect waves-dark" href="#">Jubilee Hotel launches new website</a>
+								</li>
+								<li><a class="waves-effect waves-dark" href="services.html">We are rebranding soon. Be
+										prepared</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sub-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="copyright">
+								<p>
+									<span>&copy; Jubilee Hotels 2023. All rights reserved. <a
+											href="https://webthemez.com/free-bootstrap-templates/" target="_blank"></a>
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<ul class="social-network">
+								<li><a class="waves-effect waves-dark" href="https://facebook.com/" target="_blank"
+										data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="waves-effect waves-dark" href="https://twitter.com/" target="_blank"
+										data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="waves-effect waves-dark" href="https://linkedin.com/" target="_blank"
+										data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+								<li><a class="waves-effect waves-dark" href="https://pinterest.com/" target="_blank"
+										data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+								<!--<li><a class="waves-effect waves-dark" href="https://google.com/" target="_blank" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<a href="#" class="scrollup waves-effect waves-dark"><i class="fa fa-angle-up active"></i></a>
+	<!-- javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="materialize/js/materialize.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-media.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/animate.js"></script>
+	<!-- Vendor Scripts -->
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
